@@ -203,7 +203,6 @@ function setMenuToggleText() {
 
 function setMenu() {
   setMenuState();
-  setMenuToggleText();
   setTimeout(function () {
     // Transition fix: Add transition to menu and main content
     // after some time.
@@ -247,6 +246,7 @@ function initToggleMenuHandlers() {
     e.stopPropagation();
     closeActiveGroup();
     owContainer.classList.toggle('toggle-menu');
+    setMenuToggleText();
   });
 }
 
